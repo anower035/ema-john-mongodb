@@ -14,7 +14,7 @@ const Shops = () => {
     const [cart,setCart]=useState([])
 
     useEffect(() =>{
-        fetch('http://mysterious-waters-58960.herokuapp.com/products')
+        fetch('https://mysterious-waters-58960.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
@@ -22,7 +22,7 @@ const Shops = () => {
     useEffect(() =>{
         const savedCart=getDatabaseCart();
         const productKeys=Object.keys(savedCart);
-        fetch('http://mysterious-waters-58960.herokuapp.com/productByKeys',{
+        fetch('https://mysterious-waters-58960.herokuapp.com/productByKeys',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

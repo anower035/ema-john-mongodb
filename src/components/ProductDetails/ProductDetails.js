@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const [product,setProduct]=useState({})
 
     useEffect(() => {
-        fetch('http://mysterious-waters-58960.herokuapp.com/product/'+productKey)
+        fetch('https://mysterious-waters-58960.herokuapp.com/product/'+productKey)
         .then(res => res.json())
         .then(data =>setProduct(data))
     },[productKey])
